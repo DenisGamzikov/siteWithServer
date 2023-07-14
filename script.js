@@ -41,23 +41,27 @@ function filter(moreThan, lessThan) {
 function filterOld(data) {
   rowElements.forEach((rowEl) => {
     ageEl = rowEl.querySelector(".age");
-
-    if (age.innerText <= data) {
-      rowEl.style.display = "null";
-    } else {
-      rowEl.style.display = "none";
-    }
+    rowElements.forEach((rowEl) => {
+      rowEl.classList.add("d-none");
+      if (age.innerText <= data) {
+        rowEl.classList.remove("d-none");
+      } else {
+        rowEl.classList.add("d-none");
+      }
+    });
   });
 }
 function filterYoung(data) {
   rowElements.forEach((rowEl) => {
     ageEl = rowEl.querySelector(".age");
-
-    if (age.innerText >= data) {
-      rowEl.style.display = "null";
-    } else {
-      rowEl.cl.display = "none";
-    }
+    rowElements.forEach((rowEl) => {
+      rowEl.classList.add("d-none");
+      if (age.innerText >= data) {
+        rowEl.classList.remove("d-none");
+      } else {
+        rowEl.classList.add("d-none");
+      }
+    });
   });
 }
 loadingData();
