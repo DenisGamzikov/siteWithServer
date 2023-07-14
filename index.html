@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./style.css" rel="stylesheet" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="buttons">
+      <button class="button-selector" onclick="filter(1000000, 1000000000)">
+        1млн+
+      </button>
+      <button class="button-selector" onclick="filter(500000, 1000000)">
+        500тыс - 1млн
+      </button>
+      <button class="button-selector" onclick="filterOld(1523)">
+        Старше 500 лет
+      </button>
+      <button class="button-selector" onclick="filterYoung(1523)">
+        моложе 500 лет
+      </button>
+    </div>
+    <table id="table">
+      <thead>
+        <tr>
+          <th>Город <span id="counter"></span></th>
+          <th>Население</th>
+          <th>Дата основания</th>
+        </tr>
+      </thead>
+      <tbody id="table-data"></tbody>
+    </table>
+    <div class="loader"><img src="./loading.png" id="loader" /></div>
+    <script src="./script.js"></script>
+  </body>
+</html>
