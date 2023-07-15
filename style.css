@@ -26,6 +26,9 @@ table td {
 .d-table-cell {
   display: table-cell;
 }
+.active-tr {
+  background-color: transparent;
+}
 .d-block {
   width: 200px;
   animation: rotate 3s linear infinite;
